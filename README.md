@@ -80,7 +80,7 @@ No terminal novamente
     
 Pegar esse arquivo e vai deixar disponível leitura e escrita só para quem é o autor daquele arquivo
 
-    chmod 400 iac-alura.pem
+    chmod 400 nome-da-chave
 
 **Grupo de segurança**
 Ele tem algumas regras, as regras de entrada e as regras de saída. No caso aqui, nós vamos editar essas regras para permitir a nossa conexão.
