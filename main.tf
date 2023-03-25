@@ -10,20 +10,20 @@ terraform {
 }
 
 provider "aws" {
-    profile = "default"
-    region  = "us-west-2"
+  profile = "default"
+  region  = "us-west-2"
 }
 
 resource "aws_instance" "app_server" {
   ami           = "ami-00712dae9a53f8c15"
   instance_type = "t2.micro"
   key_name      = "juliana-oregon"
-  user_data     =  <<-EOF
-                      #!/bin/bash
-                      cd /home/ubuntu
-                      echo "<h1>Feito com Terraform<h1/>" > index.html
-                      nohup busybox httpd -f -p 8080 &
-                      EOF
+  #user_data     = <<-EOF
+  #                    #!/bin/bash
+  #                    cd /home/ubuntu
+  #                    echo "<h1>Feito com Terraform<h1/>" > index.html
+  #                    nohup busybox httpd -f -p 8080 &
+  #                    EOF
   tags = {
     Name = "ExampleAppServerInstance"
   }
